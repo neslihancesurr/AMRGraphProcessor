@@ -5,7 +5,7 @@ import java.util.List;
 
 public class FileReader {
     public static void main(String[] args) throws IOException {
-        String csvFile = "/Users/neslihancesur/IdeaProjects/amr-reading/src/Amrtest.csv";
+        String csvFile = "src/Amrtest.csv";
         String line;
         List<AMRGraph> allGraphs = new ArrayList<>();
         AMRGraph graph = null;
