@@ -50,4 +50,9 @@ public class AMRGraph {
     protected AMRGraph clone() {
         return new AMRGraph(index, sentence, (HashMap<AMRNode, ArrayList<AMREdge>>) nodes.clone());
     }
+
+    @Override
+    public String toString() {
+        return "[Index: " + index + ", Sentence: " + sentence + "]";
+    }
 }

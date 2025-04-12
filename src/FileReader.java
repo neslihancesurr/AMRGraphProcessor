@@ -14,19 +14,22 @@ public class FileReader {
                 String[] parts = line.split(",");
                 if (parts.length != 0) {
                     if (line.contains(".train")) {
+                        if (!indentNodes.isEmpty()) {
+                            try {
+                                buildGraphNodes(indentNodes, graph);
+                                //graph.printGraph();
+                                allGraphs.add(graph.clone());
+                                //System.out.println("empty");
+                                //System.out.println("------------");
+                            } catch (Exception e) {
+                                System.out.println(graph + " not done.");
+                            }
+                        }
+                        indentNodes = new ArrayList<>();
                         graph = new AMRGraph(parts[0].trim(), parts[1].trim());
                     } else if (graph != null) {
                         parseIndentNodes(parts, indentNodes);
                     }
-                } else if (graph != null) {
-                    buildGraphNodes(indentNodes, graph);
-                    System.out.println(graph.getIndex() + " done.");
-                    graph.printGraph();
-                    allGraphs.add(graph.clone());
-                    graph = null; // Reset for next sentence
-                    indentNodes = new ArrayList<>();
-                    System.out.println("empty");
-                    System.out.println("------------");
                 }
             }
         }
@@ -82,7 +85,7 @@ public class FileReader {
         String csvFile = "files/amrtest6.csv";
         ArrayList<AMRGraph> graphs = processCSVFile(csvFile);
         for (AMRGraph graph : graphs) {
-            System.out.println(graph);
+            graph.printGraph();
         }
     }
 
