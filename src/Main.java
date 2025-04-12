@@ -14,11 +14,8 @@ public class Main {
         graph1.addEdge("2/ilgilendi", "o", "ARG0");
 
 
-        Map<String, AMRNode> nodesMap = graph1.nodes;
-
         graph1.printGraph();
 
-        nodesMap.forEach((key, value) -> System.out.println(key + " => " + value));
 
 
     }
