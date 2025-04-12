@@ -1,44 +1,28 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.io.*;
+import java.util.*;
 
 public class FileReader {
-    public static void main(String[] args) throws IOException {
-        String csvFile = "files/amrtest6.csv";
-        processCSVFile(csvFile);
-    }
 
-
-    private static void processCSVFile(String csvFile) throws IOException {
+    public static ArrayList<AMRGraph> processCSVFile(String csvFile) throws IOException {
         String line;
-        List<AMRGraph> allGraphs = new ArrayList<>();
+        ArrayList<AMRGraph> allGraphs = new ArrayList<>();
         AMRGraph graph = null;
-        List<IndentNode> indentNodes = new ArrayList<>();
-
+        ArrayList<IndentNode> indentNodes = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new java.io.FileReader(csvFile))) {
             while ((line = br.readLine()) != null) {
                 line = line.trim();
                 String[] parts = line.split(",");
-
                 if (parts.length != 0) {
                     if (line.contains(".train")) {
-                        graph = new AMRGraph();
-                        String index = parts[0].trim();
-                        String sentence = parts[1].trim();
-                        graph.setIndex(index);
-                        graph.setSentence(sentence);
+                        graph = new AMRGraph(parts[0].trim(), parts[1].trim());
                     } else if (graph != null) {
                         parseIndentNodes(parts, indentNodes);
                     }
-                    continue;
-                }
-
-                if (graph != null) {
+                } else if (graph != null) {
                     buildGraphNodes(indentNodes, graph);
+                    System.out.println(graph.getIndex() + " done.");
                     graph.printGraph();
-                    allGraphs.add(graph);
+                    allGraphs.add(graph.clone());
                     graph = null; // Reset for next sentence
                     indentNodes = new ArrayList<>();
                     System.out.println("empty");
@@ -46,30 +30,26 @@ public class FileReader {
                 }
             }
         }
+        return allGraphs;
     }
 
 
-    private static void buildGraphNodes(List<IndentNode> indentNodes, AMRGraph graph){
-       graph.addNode(indentNodes.get(0).name);
-
+    private static void buildGraphNodes(List<IndentNode> indentNodes, AMRGraph graph) {
         int currentIndex = 0;
         int nextIndex = 1;
        while (nextIndex < indentNodes.size()) {
            IndentNode currentNode = indentNodes.get(currentIndex);
            IndentNode nextNode = indentNodes.get(nextIndex);
-
-
-           if (nextNode.indent == currentNode.indent+1){
-               graph.addEdge(currentNode.name, nextNode.name, nextNode.relation);
-           } else if ((nextNode.indent == currentNode.indent) || (nextNode.indent < currentNode.indent)) {
-               int tmpIndex = nextIndex-1;
-               while (indentNodes.get(tmpIndex).indent != nextNode.indent-1){
+           if (nextNode.indent() == currentNode.indent() + 1) {
+               graph.addEdge(currentNode.name(), nextNode.name(), nextNode.relation());
+           } else if ((nextNode.indent() == currentNode.indent()) || (nextNode.indent() < currentNode.indent())) {
+               int tmpIndex = nextIndex - 1;
+               while (indentNodes.get(tmpIndex).indent() != nextNode.indent() - 1){
                    tmpIndex--;
                }
                //tmpIndex is the parent of the node
-               graph.addEdge(indentNodes.get(tmpIndex).name, nextNode.name, nextNode.relation);
+               graph.addEdge(indentNodes.get(tmpIndex).name(), nextNode.name(), nextNode.relation());
            }
-
            currentIndex++;
            nextIndex++;
        }
@@ -77,21 +57,18 @@ public class FileReader {
 
     private static void parseIndentNodes(String[] parts, List<IndentNode> indentNodes ) {
         int index = 0;
-
         while (index < parts.length) {
             int indentCount = 0;
             while (index < parts.length && parts[index].isEmpty()) {
                 indentCount++;
                 index++;
             }
-
             if (index < parts.length) {
                 String word = parts[index];
                 if (word.contains(":")) {
                     String[] sep = word.split(":");
                     String name = sep.length > 0 ? sep[0] : "unknown";
                     String relation = sep.length > 1 ? sep[1] : "no relation";
-
                     indentNodes.add(new IndentNode(name, relation, indentCount));
                 } else {
                     indentNodes.add(new IndentNode(word, "no relation", indentCount));
@@ -101,7 +78,15 @@ public class FileReader {
         }
     }
 
-    private static void findUnannotatedSentences(String csvFile) throws IOException {
+    public static void main(String[] args) throws IOException {
+        String csvFile = "files/amrtest6.csv";
+        ArrayList<AMRGraph> graphs = processCSVFile(csvFile);
+        for (AMRGraph graph : graphs) {
+            System.out.println(graph);
+        }
+    }
+
+    /**private static void findUnannotatedSentences(String csvFile) throws IOException {
         List<IndentNode> indentNodes = new ArrayList<>();
         String line;
         String title = " ";
@@ -141,7 +126,7 @@ public class FileReader {
 
             System.out.println("Total count of unannotated sentences: " + totalCount);
         }
-    }
+    }**/
 }
      // If indent is not zero and it has no relation, print as error
 

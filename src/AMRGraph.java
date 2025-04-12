@@ -1,51 +1,53 @@
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class AMRGraph {
-    String index;
-    String sentence;
-    Map<String, AMRNode> nodes;
-    List<AMREdge> relationEdges;
 
-    public AMRGraph(){
-        this.nodes = new HashMap<>();
-        this.relationEdges = new LinkedList<>();
-        this.index = "not set";
-        this.sentence = "not set";
+    private final String index;
+    private final String sentence;
+    private final HashMap<AMRNode, ArrayList<AMREdge>> nodes;
 
-    }
-    public AMRGraph(String index ,String sentence){
+    public AMRGraph(String index, String sentence) {
         this.nodes = new HashMap<>();
-        this.relationEdges = new LinkedList<>();
         this.index = index;
         this.sentence = sentence;
     }
 
-    public void setIndex(String index) {
+    public AMRGraph(String index, String sentence, HashMap<AMRNode, ArrayList<AMREdge>> nodes) {
+        this.nodes = nodes;
         this.index = index;
-    }
-    public void setSentence(String sentence){
         this.sentence = sentence;
     }
-    public AMRNode addNode(String entity){
-        nodes.putIfAbsent(entity, new AMRNode(entity));
-        return nodes.get(entity);
-    }
-    public void addEdge(String fromEntity, String toEntity, String relation){
-        AMRNode from = addNode(fromEntity);
-        AMRNode to = addNode(toEntity);
-        relationEdges.add(new AMREdge(relation, from, to));
+
+    public String getIndex() {
+        return index;
     }
 
-    public void printGraph(){
-        System.out.println("Index: " + index);
-        System.out.println("Sentence: " + sentence);
+    public String getSentence() {
+        return sentence;
+    }
 
-        for (AMREdge edge: relationEdges) {
-            System.out.println(edge);
+    public void addEdge(String fromEntity, String toEntity, String relation) {
+        AMRNode from = new AMRNode(fromEntity);
+        if (!nodes.containsKey(from)) {
+            nodes.put(from, new ArrayList<>());
         }
+        AMRNode to = new AMRNode(toEntity);
+        nodes.get(from).add(new AMREdge(to, relation));
+    }
 
+    public void printGraph() {
+        System.out.println("Index: " + this.index);
+        System.out.println("Sentence: " + this.sentence);
+        for (AMRNode node : nodes.keySet()) {
+            System.out.println(node + "'s children:");
+            for (AMREdge edge : nodes.get(node)) {
+                System.out.println(edge);
+            }
+        }
+    }
+
+    @Override
+    protected AMRGraph clone() {
+        return new AMRGraph(index, sentence, (HashMap<AMRNode, ArrayList<AMREdge>>) nodes.clone());
     }
 }

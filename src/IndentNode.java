@@ -1,16 +1,7 @@
-public class IndentNode {
-    String name;
-    String relation;
-    int indent;
-
-    public IndentNode(String name, String relation, int indent){
-        this.name = name;
-        this.indent = indent;
-        this.relation = relation;
-    }
+public record IndentNode(String name, String relation, int indent) {
 
     @Override
     public String toString() {
-        return  name + " " +  relation + " " + indent;
+        return name + " " + relation + " " + indent;
     }
 }
