@@ -8,4 +8,9 @@ public class IndentNode {
         this.indent = indent;
         this.relation = relation;
     }
+
+    @Override
+    public String toString() {
+        return  name + " " +  relation + " " + indent;
+    }
 }

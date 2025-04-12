@@ -4,20 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2050d9a-e4f9-4037-8575-8a3afa6e5215" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AMRGraphProcessor.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AMREdge.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AMRGraph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AMRNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Amrtest.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FileReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/IndentNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    <list default="true" id="f2050d9a-e4f9-4037-8575-8a3afa6e5215" name="Changes" comment="some bugs fixed&#10;renewed test data&#10;findUnannotatedSentences method added">
+      <change afterPath="$PROJECT_DIR$/files/AmrTest4.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/Amrtest2.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/Amrtest3.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/amrtest5.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/amrtest6.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Amrtest.csv" beforeDir="false" afterPath="$PROJECT_DIR$/files/Amrtest.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IndentNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IndentNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,14 +30,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/files" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
@@ -53,6 +51,27 @@
       <option name="presentableId" value="Default" />
       <updated>1740764842326</updated>
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <created>1740774721177</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1740774721177</updated>
+    </task>
+    <task id="LOCAL-00002" summary="file name updated">
+      <created>1740774811220</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1740774811220</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <MESSAGE value="file name updated" />
+    <MESSAGE value="some bugs fixed&#10;renewed test data&#10;findUnannotatedSentences method added" />
+    <option name="LAST_COMMIT_MESSAGE" value="some bugs fixed&#10;renewed test data&#10;findUnannotatedSentences method added" />
   </component>
 </project>
