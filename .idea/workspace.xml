@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2050d9a-e4f9-4037-8575-8a3afa6e5215" name="Changes" comment="some bugs fixed&#10;renewed test data&#10;findUnannotatedSentences method added">
+    <list default="true" id="f2050d9a-e4f9-4037-8575-8a3afa6e5215" name="Changes" comment="Initial Commit.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AMREdge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AMREdge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AMRGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AMRGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AMRNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AMRNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/AmrTest4.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/Amrtest.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/Amrtest2.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/Amrtest3.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/amrtest5.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/amrtest6.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IndentNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IndentNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,26 +38,26 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2tgDUiTfnJVImUfPFEhfTcHuukQ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.FileReader.executor": "Run",
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.FileReader.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/files" />
@@ -88,8 +89,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.23774.435" />
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-IU-251.23774.435" />
       </set>
     </attachedChunks>
   </component>
@@ -103,7 +104,16 @@
       <updated>1740764842326</updated>
       <workItem from="1744452311702" duration="61000" />
       <workItem from="1744452384975" duration="745000" />
-      <workItem from="1744457665390" duration="6250000" />
+      <workItem from="1744457665390" duration="6563000" />
+      <workItem from="1744464260588" duration="557000" />
+      <workItem from="1744465187471" duration="118000" />
+      <workItem from="1744466719074" duration="1921000" />
+      <workItem from="1744468786957" duration="490000" />
+      <workItem from="1744480985960" duration="60000" />
+      <workItem from="1744533825281" duration="179000" />
+      <workItem from="1744534006891" duration="1812000" />
+      <workItem from="1745676615318" duration="833000" />
+      <workItem from="1745677597789" duration="13000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1740774721177</created>
@@ -119,7 +129,31 @@
       <option name="project" value="LOCAL" />
       <updated>1740774811220</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Initial Commit.">
+      <option name="closed" value="true" />
+      <created>1744464250598</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1744464250598</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Initial Commit.">
+      <option name="closed" value="true" />
+      <created>1744465270953</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1744465270953</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Initial Commit.">
+      <option name="closed" value="true" />
+      <created>1744468592751</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1744468592751</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,7 +163,8 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="file name updated" />
     <MESSAGE value="some bugs fixed&#10;renewed test data&#10;findUnannotatedSentences method added" />
-    <option name="LAST_COMMIT_MESSAGE" value="some bugs fixed&#10;renewed test data&#10;findUnannotatedSentences method added" />
+    <MESSAGE value="Initial Commit." />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -141,8 +176,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/FileReader.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="5" />
+          <line>85</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

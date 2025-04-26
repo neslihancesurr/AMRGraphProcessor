@@ -13,7 +13,7 @@ public class FileReader {
                 line = line.trim();
                 String[] parts = line.split(",");
                 if (parts.length != 0) {
-                    if (line.contains(".train")) {
+                    if (line.contains(".train") || line.contains(".test")) {
                         if (!indentNodes.isEmpty()) {
                             try {
                                 buildGraphNodes(indentNodes, graph);
@@ -82,7 +82,7 @@ public class FileReader {
     }
 
     public static void main(String[] args) throws IOException {
-        String csvFile = "files/amrtest6.csv";
+        String csvFile = "files/amrtest7.csv";
         ArrayList<AMRGraph> graphs = processCSVFile(csvFile);
         for (AMRGraph graph : graphs) {
             graph.printGraph();
