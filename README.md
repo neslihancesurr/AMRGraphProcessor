@@ -80,3 +80,16 @@ public static void main(String[] args) throws IOException {
         graph.printGraph();
     }
 }
+```
+
+## Output
+
+The printGraph() method displays the adjacency list for the graph:
+
+```output
+Index: 0463.train
+Sentence: SÜREKLİ İLGİLENDİ .
+2/ilgilendi's children:
+Relation: frequency, To: 1/sürekli
+Relation: ARG0, To: o
+```
