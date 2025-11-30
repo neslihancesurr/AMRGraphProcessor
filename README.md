@@ -33,11 +33,12 @@ The lines following the header represent the nodes. The hierarchy is defined by 
 ### Example CSV Structure
 
 **Raw CSV View:**
+```csv
 0463.train, SÜREKLİ İLGİLENDİ .
 2/ilgilendi,
 ,1/sürekli:frequency
 ,o:ARG0
-
+```
 ### Spreadsheet View (Visual)
 
 | Column A (ID/Root) | Column B (Lvl 1) | Column C (Lvl 2) | Note |
